@@ -19,24 +19,30 @@ public class MyString {
     /** Returns the lowercase version of the given string. */
     public static String lowerCase(String str) {
         String temp=str;
-        String str2=str;
-        
+        int n= str.length();
+        char c =' ';
         for(int i=0;i<str.length();i++)
         {
-            if(str.charAt(i)>64 && str.charAt(i)<91)
+            
+            if(str.charAt(i)>64&&str.charAt(i)<91)
             {
-                temp=str2.substring(0, i+1);
-                
-                temp += (char)(str.charAt(i)+32);
-                
-                temp+=str.substring(i+1,str.length() );
+                temp="";
+                c=(char)(str.charAt(i)+32);
+                if(i!=0)
+                    temp= str.substring(0,i);
+                temp+=c;
+                temp+= str.substring(i+1, n);
+            }
+            str="";
+            for(int j=0;j<n;j++)
+            {
+                str+=temp.charAt(j);
                 
             }
-            str2=temp;
             
         }
         
-        return temp;
+        return str;
     }
 
     /** If str1 contains str2, returns true; otherwise returns false. */

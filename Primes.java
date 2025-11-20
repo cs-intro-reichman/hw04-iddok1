@@ -20,6 +20,6 @@ public class Primes {
                 System.err.println(i);
             }
         }
-        System.err.println("There are "+count+ " primes between 2 and "+n+" ("+(int)(((double)count/n)*100)+"%25 are primes)");
+        System.err.println("There are "+count+ " primes between 2 and "+n+" ("+(int)(((double)count/n)*100)+"% are primes)");
     }
 }
