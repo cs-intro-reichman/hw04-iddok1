@@ -19,13 +19,13 @@ public class MyString {
     /** Returns the lowercase version of the given string. */
     public static String lowerCase(String str) {
         String temp=str;
-        String str2="";
+        String str2=str;
         
         for(int i=0;i<str.length();i++)
         {
             if(str.charAt(i)>64 && str.charAt(i)<91)
             {
-                temp=str.substring(0, i+1);
+                temp=str2.substring(0, i+1);
                 
                 temp += (char)(str.charAt(i)+32);
                 
