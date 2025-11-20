@@ -3,18 +3,31 @@ public class Primes {
         int n = Integer.parseInt(args [0]);
         System.err.println("Prime numbers up to "+n+ ":");
         int count=0;
-        boolean flag=true;
-        for(int i=2;i<=n;i++)
+        boolean [] arr = new boolean [n+1];
+        for(int i=2;i<arr.length;i++)
         {
-            flag=true;
-            for(int j=2;j<i;j++)
-            {
-                if(i%j==0)
+            arr[i]=true;
+        }
+        boolean flag=true;
+        int p=2;
+        while(p<=Math.sqrt(n))
+        {
+           for(int i=p+1;i<n+1;i++)
+           {
+                if(i%p==0 && arr[i])
                 {
-                    flag = false;
+                    arr[i]=false;
                 }
-            }
-            if(flag)
+           }
+           p++;
+           while(!arr[p] && p<=Math.sqrt(n))
+           {
+                p++;
+           }
+        }
+        for(int i=0; i<arr.length;i++)
+        {
+            if(arr[i])
             {
                 count++;
                 System.err.println(i);
