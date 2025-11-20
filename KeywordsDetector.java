@@ -44,7 +44,7 @@ public class KeywordsDetector {
             }
             if(flag)
             {
-                System.err.println(sentences[i]);
+                System.out.println(sentences[i]);
             }
         }
     }
