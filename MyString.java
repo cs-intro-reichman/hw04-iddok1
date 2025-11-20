@@ -12,7 +12,7 @@ public class MyString {
         System.out.println(contains("historical", "story")); // false
         System.out.println(contains("psychology", "psycho")); // true
         System.out.println(contains("personality", "son")); // true
-        System.out.println(contains("personality", "dad")); // false
+        System.out.println(contains("personality", "")); // false
         System.out.println(contains("resignation", "sign")); // true
     }
 
@@ -48,11 +48,18 @@ public class MyString {
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
         // Replace the following statement with your code
+        str2=str2.toLowerCase();
+         str1=str1.toLowerCase();
+         if(str2.length()==0||str1.length()==0)
+         {
+            return false;
+         }
         boolean flag=true;
         if(str2.length()<=str1.length()){
         for(int i=0;i<str1.length();i++)
         {
             flag=true;
+            
             if(str1.charAt(i)==str2.charAt(0))
             {
                 for(int j=0;j<str2.length()&& i+j<str1.length();j++)
