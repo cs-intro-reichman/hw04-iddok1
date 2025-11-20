@@ -23,8 +23,13 @@ public class KeywordsDetector {
     public static void detectAndPrint(String[] sentences, String[] keywords) {
         // Replace this comment with your code
         boolean flag=false;
+        for(int i=0;i<keywords.length;i++)
+        {
+            keywords[i]=keywords[i].toLowerCase();
+        }
         for(int i=0;i<sentences.length;i++)
         {
+            sentences[i]=sentences[i].toLowerCase();
             flag = false;
             for(int j=0;j<keywords.length;j++)
             {

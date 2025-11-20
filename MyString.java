@@ -25,7 +25,7 @@ public class MyString {
         {
             if(str.charAt(i)>64 && str.charAt(i)<91)
             {
-                temp=str2.substring(0, i);
+                temp=str.substring(0, i);
                 
                 temp += (char)(str.charAt(i)+32);
                 

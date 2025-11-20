@@ -2,24 +2,24 @@
  *  The library also features a string comparison method. */
 public class ArrCharOps {
     public static void main(String[] args) {
-        String str = "clearly";
+        //String str = "clearly";
         char[] arr1 = {'c','l','e','a','r','l','y'};
         char[] arr2 = {'U','n','d','e','r','s','t', 'o', 'o', 'd'};
-        System.out.println(str);  // Prints the string
-        println(arr1);            // Prints an array of characters
-        System.out.println(charAt(arr1,2));      
-        System.out.println(indexOf(arr1,'l'));  
-        System.out.println(indexOf(arr1,'l',3)); 
-        System.out.println(lastIndexOf(arr1, 'l'));
-        System.out.println(concat(arr1, arr2));
-        System.out.println(subArray(arr2, 2, 9));
-        System.out.println(compareTo("abcd", "abcd"));
-        System.out.println(compareTo("abc", "abcd"));
-        System.out.println(compareTo("abw", "abcd"));
-        System.out.println(compareTo("Abcd", "a"));
-        System.out.println(compareTo("apple", "banana"));
-        System.out.println(compareTo("apple", "applepie"));
-        System.out.println(compareTo("Zoo", "zoo"));
+        //System.out.println(str);  // Prints the string
+        //println(arr1);            // Prints an array of characters
+        //System.out.println(charAt(arr1,2));      
+        //System.out.println(indexOf(arr1,'l'));  
+        //System.out.println(indexOf(arr1,'l',3)); 
+        //System.out.println(lastIndexOf(arr1, 'l'));
+        //System.out.println(concat(arr1, arr2));
+        //System.out.println(subArray(arr2, 2, 9));
+        //System.out.println(compareTo("abcd", "abcd"));
+        //System.out.println(compareTo("abc", "abcd"));
+        //System.out.println(compareTo("abw", "abcd"));
+        System.out.println(compareTo("Abcd", "a"));//1
+        System.out.println(compareTo("apple", "banana"));//-1
+        System.out.println(compareTo("apple", "applepie"));//-1
+        System.out.println(compareTo("Zoo", "zoo"));//0
         System.out.println(hashCode(arr1));
         System.out.println(hashCode(arr2));
     }
@@ -143,10 +143,11 @@ public class ArrCharOps {
      */
     public static long hashCode(char[] arr) {
         int sum=0;
+        int n= arr.length-1;
         // Replace the following statement with your code
-        for(int i=0;i<arr.length-1;i++)
+        for(int i=0;i<arr.length;i++)
         {
-            sum+= (arr[i]* Math.pow(7,arr.length-1-i));
+            sum+= (arr[i]* Math.pow(7,(n-i)));
         }
         return sum;
     }
@@ -178,7 +179,8 @@ public class ArrCharOps {
      */
     public static int compareTo(String str1, String str2) {
         // Replace the following statement with your code
-        
+        str1=str1.toLowerCase();
+        str2=str2.toLowerCase();
         if(str1.length()<str2.length())
         {
             for(int i=0;i<str1.length();i++)
