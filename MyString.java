@@ -48,8 +48,6 @@ public class MyString {
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
         // Replace the following statement with your code
-        str2=str2.toLowerCase();
-         str1=str1.toLowerCase();
          if(str2.length()==0||str1.length()==0)
          {
             return false;
