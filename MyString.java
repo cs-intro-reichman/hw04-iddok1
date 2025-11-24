@@ -48,14 +48,14 @@ public class MyString {
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
         // Replace the following statement with your code
-         if(str2.length()==0||str1.length()==0)
+         if(str2.length()==0||str1.length()==0 || str1==null || str2== null)
          {
             return false;
          }
          if(str1.length()<str2.length())
             return false;
         boolean flag=true;
-        if(str2.length()<=str1.length()){
+       
         for(int i=0;i<str1.length();i++)
         {
             flag=true;
@@ -75,7 +75,7 @@ public class MyString {
                 }
             }
         }
-    }
+    
         return false;
     }
 }
