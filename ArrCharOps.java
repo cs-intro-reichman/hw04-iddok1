@@ -19,7 +19,7 @@ public class ArrCharOps {
         System.out.println(compareTo("Abcd", "a"));//1
         System.out.println(compareTo("apple", "banana"));//-1
         System.out.println(compareTo("apple", "applepie"));//-1
-        System.out.println(compareTo("Zoo", "zoo"));//0
+        System.out.println(compareTo("Zoo", "zoo"));
         System.out.println(hashCode(arr1));
         System.out.println(hashCode(arr2));
     }
@@ -181,8 +181,6 @@ public class ArrCharOps {
         // Replace the following statement with your code
         if(str1.length()==0 || str2.length()==0 || str1 == null || str2 == null)
             return -2;
-        str1=str1.toLowerCase();
-        str2=str2.toLowerCase();
         if(str1.length()<str2.length())
         {
             for(int i=0;i<str1.length();i++)
