@@ -48,7 +48,9 @@ public class MyString {
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
         // Replace the following statement with your code
-         if(str2.length()==0||str1.length()==0 || str1==null || str2== null)
+        if(str2.length()==0)
+            return true;
+         if(str1.length()==0 || str1==null || str2== null)
          {
             return false;
          }
