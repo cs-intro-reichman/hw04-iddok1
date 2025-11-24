@@ -54,28 +54,18 @@ public class MyString {
          }
          if(str1.length()<str2.length())
             return false;
-        boolean flag=true;
-       
-        for(int i=0;i<str1.length();i++)
+        int j=0;
+        for(int i=0; i<= str1.length()-str2.length();i++)
         {
-            flag=true;
-            
-            if(str1.charAt(i)==str2.charAt(0))
+            j=0;
+            while(j < str2.length() && str1.charAt(i+j) == str2.charAt(j))
             {
-                for(int j=0;j<str2.length()&& i+j<str1.length();j++)
-                {
-                    if(str1.charAt(i+j)!=str2.charAt(j))
-                    {
-                        flag=false;
-                    }
-                }
-                if(flag)
-                {
-                    return true;
-                }
+                j++;
             }
+            if(j == str2.length())
+                return true;
+
         }
-    
         return false;
-    }
+        }
 }
