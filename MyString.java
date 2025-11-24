@@ -52,6 +52,8 @@ public class MyString {
          {
             return false;
          }
+         if(str1.length()<str2.length())
+            return false;
         boolean flag=true;
         if(str2.length()<=str1.length()){
         for(int i=0;i<str1.length();i++)
